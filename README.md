@@ -8,7 +8,7 @@ On the LHS we have all the transactions with your financial planner.
 This is money going into and coming out of his *fund*. We should not need to care about the actual funds your financial planner invests in.
 On the RHS we have *what if* this money was invested with a particular wholesale fund.
 
-The investment period will be from the day the first amount was introduced to the financial planner's *fund* up until yesterday.
+The investment period will be from the day the first amount was introduced to the financial planner's *fund* up until today, or whenever financial data is collected up until.
 
 LHS - Financial planner
 -----------------------
@@ -25,20 +25,14 @@ Hopefully we can get this information from existing reports already delivered to
 
 RHS - Wholesale fund
 --------------------
-
 The unit price of the wholesale fund varies every day over the investment period.
-It is assumed we know this stream of unit prices and have an IRR function.
+It is assumed we know this stream of unit prices on a daily basis.
 Furthermore it is assumed that the unit price stream abstracts over all expenses and revenue gained from the wholesale fund.
 This is a big IF - what about startup and exit fees? Other problems?
-The only other input is to apply 1 and 2 from above. We need to assume the investor puts money in and takes it out from this wholesale fund.
 
-IRR function
-------------
-
-Complex and needs to be described. Do we need a stream of CPI figures to take account of inflation as well?
+Once these assumptions have been dealt with the only other input is to apply 1 and 2 from above. We need to simulate that the investor puts money in and takes it out from this wholesale fund. There is no need for IRR calculations if we record amounts of money at unit prices - think of it as bags of money at unit prices. The current valuation will depend on what the unit price is today for all these bags of money.   
 
 Result
 ------
-
 How well the financial planner did compared to the wholesale fund in one amount, in terms of today's dollars.
 This will be negative if the financial planner did not do as well as the wholesale fund.
