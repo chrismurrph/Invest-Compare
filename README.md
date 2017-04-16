@@ -27,10 +27,11 @@ RHS - Wholesale fund
 --------------------
 The unit price of the wholesale fund varies every day over the investment period.
 It is assumed we know this stream of unit prices on a daily basis.
-Furthermore it is assumed that the unit price stream abstracts over all expenses and revenue gained from the wholesale fund.
-This is a big IF - what about startup and exit fees? Other problems?
+Unfortunately it can't be assumed that the unit price stream abstracts over all the fees of the wholesale fund. These extra charges will need to be read up on and known about so we can impute them. There will need to be a *fees-formula* in order to do this.
 
-Once these assumptions have been dealt with the only other input is to apply 1 and 2 from above. We need to simulate that the investor puts money in and takes it out from this wholesale fund. There is no need for IRR calculations if we record amounts of money at unit prices - think of it as bags of money at unit prices. The current valuation will depend on what the unit price is today for all these bags of money.   
+Once these assumptions have been dealt with the only other input is to apply 1 and 2 from above. We need to simulate that the investor puts money in and takes it out from this wholesale fund. There is no need for IRR calculations if we record amounts of money at unit prices - think of it as bags of money at unit prices. The current valuation will depend on what the unit price is today for all these bags of money.
+
+As for how to apply the *fees-formula* - applying it should produce money coming out on particular days, in response to the passing of a certain amount of time or some user action. Perhaps each of these *fees money out* events should be the same as the investor taking money out, but the money essentially goes into a black hole as far as calculating the current valuation is concerned.  
 
 Result
 ------
