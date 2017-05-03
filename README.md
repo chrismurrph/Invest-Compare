@@ -4,16 +4,14 @@ Invest Compare
 
 You currently have a financial planner and want to compare his/her performance against a given wholesale fund.
 
-On the one hand we have all the transactions with your financial planner.
-This is money going into and coming out of his *fund* - essentially fund distributions & capital gains from the sale of units held in particular funds, fees charged by the planner, and then capital that the investor introduces and withdraws.
-On the other hand we have *what if* this money was invested with a particular wholesale fund.
+On the one hand we have all the transactions with your financial planner. This is money going into and coming out of his *portfolio*. On the other hand we have *what if* this money was invested with a particular wholesale fund.
 
-The investment period will be from the day the first amount was introduced to the financial planner's *fund* up until today, or whenever financial data is collected up until.
+The investment period will be from the day the first amount was introduced to the financial planner's *portfolio* up until today, or whenever financial data is collected up until.
 
 Financial planner
 -----------------
 
-Money is either going into the *fund* or coming out of it.
+Money is either going into the *portfolio* or coming out of it.
 There are two actors: the investor and the (financial) planner.
 With two actors and two types of events then on any date zero or more of four things can take place:
 1. investor puts money in
@@ -31,7 +29,7 @@ Wholesale fund
 --------------
 The unit price of the wholesale fund varies every day over the investment period.
 It is assumed we know this stream of unit prices on a daily basis.
-Unfortunately it can't be assumed that the unit price stream abstracts over all the fees of the wholesale fund. These extra charges will need to be read up on and known about so we can impute them. There will need to be a *fees-formula* in order to do this.
+Unfortunately it can't be assumed that the unit price stream includes over all the fees of the wholesale fund. These extra charges will need to be read up on and known about so we can impute them. There will need to be a *fees-formula* in order to do this.
 
 Once these assumptions have been dealt with the only other input is to apply 1 and 2 from above. We need to simulate that the investor puts money in and takes it out from this wholesale fund. There is no need for IRR calculations if we record amounts of money at unit prices - think of it as bags of money at unit prices. The current valuation will depend on what the unit price is today for all these bags of money.
 
